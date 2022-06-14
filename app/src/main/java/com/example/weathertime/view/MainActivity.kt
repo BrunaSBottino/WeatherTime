@@ -2,6 +2,8 @@ package com.example.weathertime.view.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import com.bumptech.glide.Glide
 import com.example.weathertime.databinding.ActivityMainBinding
 import com.example.weathertime.view.network.WeatherResponse
 import com.example.weathertime.view.viewModel.MainViewModel
@@ -27,5 +29,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateUI(newWeatherData: WeatherResponse) {
         binding.tvDay.text = newWeatherData.current.condition.text
+        try {
+            Glide.with(this).load("https:"+newWeatherData.current.condition.icon).into(binding.ivWeatherIcon)
+            Log.d("Icon link", "https:"+newWeatherData.current.condition.icon)
+        }catch (e: Exception){
+
+        }
     }
 }

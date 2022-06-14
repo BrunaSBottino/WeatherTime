@@ -1,7 +1,5 @@
 package com.example.weathertime.view.model
 
-import com.example.weathertime.view.model.Condition
-
 data class Current(
     val cloud: Int,
     val condition: Condition,
