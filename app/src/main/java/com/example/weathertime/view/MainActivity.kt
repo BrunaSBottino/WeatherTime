@@ -29,11 +29,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateUI(newWeatherData: WeatherResponse) {
 
-        var temp = binding.tvTempC.text.
-
         binding.tvWeatherUpdate.text = newWeatherData.current.condition.text
-        binding.tvResultHumidity.text = newWeatherData.current.humidity.toString()
-        binding.tvTempC.text = newWeatherData.current.temp_c.toFloat().toString()
+        binding.tvResultHumidity.text = newWeatherData.current.humidity.toString() + "%"
+        binding.tvTempC.text = newWeatherData.current.temp_c.toString() + "°C"
+
         try {
             Glide.with(this).load("https:"+newWeatherData.current.condition.icon).into(binding.ivWeatherIcon)
             Log.d("Icon link", "https:"+newWeatherData.current.condition.icon)

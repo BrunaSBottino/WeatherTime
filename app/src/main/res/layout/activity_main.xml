@@ -10,13 +10,12 @@
         android:id="@+id/tvWeatherUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:text="@string/weather_update"
         android:textColor="@color/white"
         android:textSize="30sp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvTemp_C"
+        app:layout_constraintStart_toStartOf="@+id/tvTemp_C"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -24,32 +23,31 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/shape_transparent"
         android:hint="@string/enter_city_country_name"
-        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/bvGet"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/bvGet"
+        app:layout_constraintStart_toStartOf="@+id/bvGet" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bvGet"
         android:layout_width="70dp"
         android:layout_height="36dp"
+        android:layout_marginBottom="100dp"
         android:background="@drawable/shape_round"
         android:text="@string/get"
         android:textColor="@color/white"
-        android:layout_marginBottom="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextSearchCity"
-        app:layout_constraintStart_toStartOf="@+id/editTextSearchCity" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivWeatherIcon"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toTopOf="@+id/editTextSearchCity"
         app:layout_constraintEnd_toEndOf="@+id/editTextSearchCity"
         app:layout_constraintStart_toStartOf="@+id/editTextSearchCity"
@@ -59,23 +57,23 @@
         android:id="@+id/tvHumidity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:textSize="20sp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/humidity"
         android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/tvResultHumidity"
-        app:layout_constraintStart_toEndOf="@+id/ivWeatherIcon"
-        app:layout_constraintTop_toTopOf="@+id/ivWeatherIcon"
-        android:text="@string/humidity" />
+        app:layout_constraintEnd_toStartOf="@+id/ivWeatherIcon"
+        app:layout_constraintTop_toTopOf="@+id/ivWeatherIcon" />
 
     <TextView
         android:id="@+id/tvResultHumidity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:textSize="16sp"
+        android:layout_marginEnd="20dp"
         android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/ivWeatherIcon"
-        app:layout_constraintStart_toEndOf="@+id/ivWeatherIcon"
+        app:layout_constraintEnd_toStartOf="@+id/ivWeatherIcon"
         tools:text="Result Humidity" />
 
     <TextView
@@ -85,6 +83,7 @@
         android:layout_marginTop="30dp"
         android:textColor="@color/white"
         android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivWeatherIcon"
         app:layout_constraintStart_toStartOf="@+id/ivWeatherIcon"
         app:layout_constraintTop_toBottomOf="@+id/tvWeatherUpdate"
         tools:text="25°" />
