@@ -3,7 +3,7 @@
 Projeto criado para estudo.
 A ideia do aplicativo Weather Time é atualizar o usuário sobre o clima da cidade/país que desejar.
 
-##Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - Projeto feito com arquitetura **MVVM**;
 - Estou utilizando **Retrofit** para facilitar a chamada de API;
